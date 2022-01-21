@@ -162,7 +162,7 @@ public class FoodService {
 	
 	public String uploadToS3(String key, MultipartFile file) throws IOException {
 //		String key = "";
-		putObject("board/" + key, file.getSize(), file.getInputStream());
+		putObject("board/food/" + key, file.getSize(), file.getInputStream());
 		
 //		String foodFileUrl = "board/" + key;
 //		System.out.println("foodFileUrl : " + foodFileUrl);
@@ -171,7 +171,7 @@ public class FoodService {
 //		System.out.println("staticUrl : " + staticUrl);
 //		System.out.println("staticUrl + / + key : " + staticUrl + "/" + key);
 		
-		return staticUrl + "/" + key;
+		return staticUrl + "/food/" + key;
 	}
 	
 	public String modifyToS3(String key, MultipartFile file) throws IOException {
@@ -180,11 +180,11 @@ public class FoodService {
 		
 		deleteObject(key);
 		
-		putObject("board/" + key, file.getSize(), file.getInputStream());
+		putObject("board/food/" + key, file.getSize(), file.getInputStream());
 		
 		System.out.println("s3 modify new board/ : " + key);
 		
-		return staticUrl + "/" + key;
+		return staticUrl + "/food/" + key;
 	}
 	
 

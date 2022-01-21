@@ -101,14 +101,14 @@ public class ResellBoardService {
 	
 	public String uploadToS3(String key, MultipartFile file) throws IOException {
 //		String key = "";
-		putObject("board/" + key, file.getSize(), file.getInputStream());
+		putObject("board/resell/" + key, file.getSize(), file.getInputStream());
 		//String resellFileUrl = "resell" + key;
 		//filemapper.fileUrlInsert(resellFileUrl);
 		
 		System.out.println("staticUrl : " + staticUrl);
-		System.out.println("staticUrl + / + key :" + staticUrl + "/" + key);
+		System.out.println("staticUrl + / + key :" + staticUrl + "/resell/" + key);
 		
-		return staticUrl + "/" + key;
+		return staticUrl + "/resell/" + key;
 	}	
 	
 	public String modifyToS3(String key, MultipartFile file) throws IOException {
@@ -117,11 +117,11 @@ public class ResellBoardService {
 		
 		deleteObject(key);
 		
-		putObject("board/" + key, file.getSize(), file.getInputStream());
+		putObject("board/resell/" + key, file.getSize(), file.getInputStream());
 		
 		System.out.println("key2 : " + key);
 		
-		return staticUrl + "/" + key;
+		return staticUrl + "/resell/" + key;
 	}	
 	
 	
@@ -155,7 +155,7 @@ public class ResellBoardService {
 	public boolean remove(Integer id) {
 		// 1. 게시물 달린 댓글 지우기
 		replyMapper.deleteByBoardId(id);
-		
+		System.out.println("removeService삭제 접근");
 //		String [] file = mapper.selectNamesByBoardId(id);
 		String[] files = mapper.selectImageKeyByBoardId(id);
 		System.out.println( "files :" + files.toString());
