@@ -260,6 +260,7 @@ public class ResellBoardController implements WebMvcConfigurer {
 		String extension = originalFileName.substring(originalFileName.lastIndexOf(".")); // 파일 확장자
 		String savedFileName = UUID.randomUUID() + extension; // 저장될 파일 명
 
+		
 //		File targetFile = new File(fileRoot + savedFileName);
 		try {
 //			InputStream fileStream = multipartFile.getInputStream();
