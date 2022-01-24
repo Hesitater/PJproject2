@@ -65,6 +65,7 @@
                         <input type="hidden" class="firstPasswordValue" value = "${sessionScope.loggedUser.password }" />
                         <input type="hidden" class="firstAddressValue" value="${sessionScope.loggedUser.address}"/>
                         <input type="hidden" name="id" value="${sessionScope.loggedUser.id }"/>
+                        
                     </form>
                 </div>
             </div>

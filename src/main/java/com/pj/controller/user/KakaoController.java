@@ -50,7 +50,7 @@ public class KakaoController {
 		MultiValueMap<String, String> params = new LinkedMultiValueMap<>();
 		params.add("grant_type", "authorization_code");
 		params.add("client_id", kakao_client_id);
-		params.add("redirect_uri", "http://localhost:8080/controller/kakao/kakaoJoin");
+		params.add("redirect_uri", "http://3.34.196.31/PJproject/kakao/kakaoJoin");
 		params.add("code", code);
 		
 		HttpEntity<MultiValueMap<String, String>> kakaoTokenRequest = new HttpEntity<>(params,headers);
@@ -113,7 +113,7 @@ public class KakaoController {
 		MultiValueMap<String, String> params = new LinkedMultiValueMap<>();
 		params.add("grant_type", "authorization_code");
 		params.add("client_id", kakao_client_id);
-		params.add("redirect_uri", "http://localhost:8080/controller/kakao/kakaoLogin");
+		params.add("redirect_uri", "http://3.34.196.31/PJproject/kakao/kakaoLogin");
 		params.add("code", code);
 		
 		HttpEntity<MultiValueMap<String, String>> kakaoTokenRequest = new HttpEntity<>(params,headers);

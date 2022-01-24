@@ -20,8 +20,8 @@
 </head>
 <body>
 <%
-    String clientId = "I0h6W4S5fUWk4zc_U2h1";//애플리케이션 클라이언트 아이디값";
-    String redirectURI = URLEncoder.encode("http://localhost:8080/controller/naver/naverLogin", "UTF-8");
+    String clientId = "E8BCZ8i4CQqEbjZzrLN1";//애플리케이션 클라이언트 아이디값";
+    String redirectURI = URLEncoder.encode("http://3.34.196.31/PJproject/naver/naverLogin", "UTF-8");
     SecureRandom random = new SecureRandom();
     String state = new BigInteger(130, random).toString();
     String apiURL = "https://nid.naver.com/oauth2.0/authorize?response_type=code";
@@ -53,7 +53,7 @@
                                 <input type="submit" class="login_input_submit" value="Login"/>
                             </div>
                             <div class="login_submitBtn_social">
-                                <a href="https://kauth.kakao.com/oauth/authorize?response_type=code&client_id=d1f2c7c111ea44b0957fc9dbf10a601f&redirect_uri=http://localhost:8080/controller/kakao/kakaoLogin&prompt=login
+                                <a href="https://kauth.kakao.com/oauth/authorize?response_type=code&client_id=d27f3e8d015a30e2ce5d28557f22b72a&redirect_uri=http://3.34.196.31/PJproject/kakao/kakaoLogin&prompt=login
                                 " class="login_kakao">
                                     <div class="login_kakao_img_box">
                                         <i class="fas fa-comment"></i>
