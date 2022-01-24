@@ -47,7 +47,7 @@
 							<div class="resell_list_body_top_info_content_mainicon">
 								<img src="${pageContext.request.contextPath }/resource/img/foodImg/resellBoardImage.png" alt="" class="resell_list_body_top_info_content_mainicon_iconimage">
 							</div>
-							<div class="resell_list_body_top_info_content">용피리에게 다양한 맛집을 알려주세요~</div>
+							<div class="resell_list_body_top_info_content">용피리와 함께 아나바다...</div>
 						</div>
 					</div>
 					<!-- board 상단 -->
